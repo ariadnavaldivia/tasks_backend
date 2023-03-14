@@ -1,24 +1,52 @@
-# Lumen PHP Framework
+# Tasks API
 
-[![Build Status](https://travis-ci.org/laravel/lumen-framework.svg)](https://travis-ci.org/laravel/lumen-framework)
-[![Total Downloads](https://img.shields.io/packagist/dt/laravel/framework)](https://packagist.org/packages/laravel/lumen-framework)
-[![Latest Stable Version](https://img.shields.io/packagist/v/laravel/framework)](https://packagist.org/packages/laravel/lumen-framework)
-[![License](https://img.shields.io/packagist/l/laravel/framework)](https://packagist.org/packages/laravel/lumen-framework)
+A Restful API for Tasks Challenge
 
-Laravel Lumen is a stunningly fast PHP micro-framework for building web applications with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Lumen attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as routing, database abstraction, queueing, and caching.
 
-## Official Documentation
+## Requirements
 
-Documentation for the framework can be found on the [Lumen website](https://lumen.laravel.com/docs).
+PHP: 7.3
+## Run Locally
 
-## Contributing
+Clone the project with command:
 
-Thank you for considering contributing to Lumen! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+```bash
+  git clone https://github.com/ariadnavaldivia/tasks_backend.git
+```
 
-## Security Vulnerabilities
+Go to the project directory with command:
 
-If you discover a security vulnerability within Lumen, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
+```bash
+  cd tasks_backend
+```
 
-## License
+Install dependencies, run command:
 
-The Lumen framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+```bash
+  composer install
+```
+Create new database and set your values in .env , for example:
+```bash
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=tasks_db
+DB_USERNAME=root
+DB_PASSWORD=
+```
+
+Set a random string  (you can use the same one)  to use as api-key in .env :
+```bash
+API_KEY=6znxetj6wwu27
+```
+Run migrations and seeders, use command:
+
+```bash
+  php artisan migrate:fresh --seed
+```
+
+Start the server
+
+```bash
+  php -S localhost:8000 -t public
+```
+
