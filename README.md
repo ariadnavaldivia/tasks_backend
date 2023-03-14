@@ -2,7 +2,6 @@
 
 A Restful API for Tasks Challenge
 
-
 ## Requirements
 
 PHP: 7.3
@@ -41,7 +40,7 @@ API_KEY=6znxetj6wwu27
 Run migrations and seeders, use command:
 
 ```bash
-  php artisan migrate:fresh --seed
+  php artisan migrate:refresh --seed
 ```
 
 Start the server
