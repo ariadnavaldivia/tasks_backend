@@ -6,7 +6,7 @@ A Restful API for Tasks Manager. This is a Lumen project.
 
 ###  1. Requirements
 
-Use PHP: 7.3
+Use PHP >= 7.3 and [Composer](https://getcomposer.org/)
 
 ### 2. Installation
 
