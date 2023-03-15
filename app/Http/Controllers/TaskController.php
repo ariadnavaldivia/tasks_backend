@@ -18,12 +18,20 @@ class TaskController extends Controller
 
         $response = [
             "success" => false,
-            "data" => [],
+            "data" => [
+                "tasks" => [],
+                "totalPages" => 0
+            ],
             "message" => ''
         ];
 
         $completed = @$body['completed'];
         $search = @$body['search'];
+        $page = isset($body['page'])?$body['page']:1;
+
+        $limit = 10;
+
+        $skip = ($page-1)*$limit;
 
         try {
 
@@ -43,8 +51,13 @@ class TaskController extends Controller
                 $tasks = $tasks->whereRaw('LOWER(name) like ?', '%' . $search . '%');
             }
 
-            $tasks = $tasks->get();
-            $response["data"] = $tasks;
+            $totalTasks=  $tasks->get();
+
+
+            $tasks = $tasks->skip($skip)->take($limit)->get();
+            $total = count($totalTasks);
+            $response["data"]["totalPages"] = ceil($total /$limit);
+            $response["data"]["tasks"] = $tasks;
             $response["success"] = true;
             $response["message"] = 'Success';
 
