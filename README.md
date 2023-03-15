@@ -5,7 +5,7 @@ A Restful API for Tasks Challenge
 ## Requirements
 
 PHP: 7.3
-## Run Locally
+## Installation
 
 Clone the project with command:
 
@@ -24,7 +24,10 @@ Install dependencies, run command:
 ```bash
   composer install
 ```
-Create new database and set your values in .env , for example:
+## Database and Environment Variables  
+
+Create new database with any name.  
+Create new file ".env" based on ".env.example" and set your correct database values, for example:
 ```bash
 DB_HOST=127.0.0.1
 DB_PORT=3306
@@ -33,19 +36,24 @@ DB_USERNAME=root
 DB_PASSWORD=
 ```
 
-Set a random string  (you can use the same one)  to use as api-key in .env :
+Set API_KEY :a random string  (you can use the same one from the example):
 ```bash
 API_KEY=6znxetj6wwu27
 ```
+
+## Migrations
 Run migrations and seeders, use command:
 
 ```bash
   php artisan migrate:refresh --seed
 ```
-
-Start the server
+## Run locally
 
 ```bash
   php -S 127.0.0.1:8000 -t public
 ```
+
+## Authors
+
+- [@ariadnavaldivia](https://github.com/ariadnavaldivia)
 
