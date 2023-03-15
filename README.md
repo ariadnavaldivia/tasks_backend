@@ -62,7 +62,7 @@ The API runs on http://127.0.0.1:8000
 - POST /api/tasks/create
 - POST /api/tasks/update
 - POST /api/tasks/delete
-[Postman Collection here](https://api.postman.com/collections/6885556-b2033348-3241-4f3a-ac84-10d9400ebb5e?access_key=PMAT-01GVJ0P00DMMMTPZ8GN7C4GV8X)
+[Postman Documentation here](https://documenter.getpostman.com/view/6885556/2s93JwNMjS)
 
 
 ## Authors
